@@ -1,0 +1,12 @@
+{
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always"
+	},
+	"[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+},
+  "material-icon-theme.activeIconPack": "nest",
+}

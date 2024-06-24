@@ -1,0 +1,47 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"@typescript-eslint",
+    "import",
+		"simple-import-sort"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"rules": {
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/explicit-function-return-type": "warn",
+    "import/newline-after-import": ["warn", { "count": 1 }],
+		"simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // Группировка импортов
+          ["^\\u0000"], // Импорты типов (например, 'import type ...')
+          ["^@?\\w"], // Импорты из библиотек
+					["^\\.\\.(?!/?$)", "^\\.\\./?$"], // Импорты из родительских директорий
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"] // Импорты из текущей директории
+				]
+      }
+    ],
+		"prettier/prettier": [
+			"warn",
+			{
+				"singleQuote": true,
+				"useTabs": true,
+				"semi": true,
+				"trailingComma": "all",
+				"bracketSpacing": true,
+				"printWidth": 140,
+				"endOfLine": "auto",
+        "tabWidth": 2
+			}
+		]
+	}
+}

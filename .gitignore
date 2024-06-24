@@ -1,0 +1,5 @@
+/node_modules
+/dist
+/.env
+/prisma/data/dev.db
+/prisma/data/dev.db-journal
